@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>菜单</title>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+        body {
+            background: radial-gradient(200% 100% at bottom center, #DEB887, #bebebe 40%, #242f4e);
+            background: radial-gradient(220% 105% at bottom center, #DEB887, #ad5757 40%, #242f4e);
+            background-attachment: fixed;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        @keyframes rotate {
+            0% {
+                transform: perspective(400px) rotateZ(200deg) rotateX(-40deg) rotateY(0);
+            }
+            100% {
+                transform: perspective(400px) rotateZ(200deg) rotateX(-40deg) rotateY(360deg);
+            }
+        }
+        .stars {
+            transform: perspective(500px);
+            transform-style: preserve-3d;
+            position: absolute;
+            perspective-origin: 50% 100%;
+            left: 50%;
+            right: 20%;
+            animation: rotate 90s infinite linear;
+            top: 0;
+        }
+        .star {
+            width: 2px;
+            height: 2px;
+            border-radius: 5px;
+            background-color: whitesmoke;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+        }
+    </style>
+<script>
+	
+</script>
+
+	</head>
+	<body>
+			<h1 style="color: gray;">张同学专属导航</h1>
+<ul class="nav nav-tabs">
+  <li class="active"><a>主页面</a></li>
+  <li><a href="#">小张の未来</a></li>
+  <li><a href="#">一起去过的地方</a></li>
+  <li><a href="#">对高某的控诉</a></li>
+</ul>
+ <div class="stars" id="stars">
+    </div>
+    <script>
+        window.onload = function () {
+            var starCount = 1000;
+            var distance = 800;
+            var stars = document.getElementById('stars')
+            for (let index = 0; index < starCount; index++) {
+                let speed = 0.1 + (Math.random() * 1);
+                let thisDiscance = distance + (Math.random() * 300)
+                stars.innerHTML += `<div class="star" id="star${index}" style='transform-origin:0 0 ${thisDiscance}px;transform:translate3d(0,0,-${thisDiscance}px) rotateY(${(Math.random() * 360)}deg) rotateX(${(Math.random() * -50)}deg)' scale(${speed},${speed})>
+                     </div>`;
+            }
+        }
+    </script>
+	</body>
+</html>
