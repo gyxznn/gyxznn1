@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登陆界面</title>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <style>
+     	body{background-color: pink;}
+     	h1{ color: hotpink; font-family:impact;}
+     </style>
+	<script>
+		function zhuyemian()
+		{
+     //1.获取账号文本框输入
+     var acconut = document.getElementById("zhanghao").value;
+     //2.获取密码框输入
+     var password0 = document.getElementById("mima").value;
+     //3.检测账号密码是否为空且是否与设置相同
+     /*if(acconut != "20200507"||password0!= "jiuyuechuyi666")
+     {
+     	for(var i=0;i < 100;i++)
+     	{
+     	alert("检测到非张同学的非法分子试图进入请立刻停止你的行为");
+     	}
+     	return;
+     }*/
+     //3.若相同则可进入
+     if(acconut == "20200507"||password0 == "jiuyuechuyi666")
+     {
+     	　window.open('xiangmuye.html');
+     }
+		}
+	</script>
+	</head>
+	<body>
+		<div class="col-lg-3 container">
+		<h1>张同学专属登陆界面</h1>
+		<h3>账号</h3>
+		<input id="zhanghao" class="form-control " type="text" placeholder="请输入您的帐号">
+		<h3>密码</h3>
+		<input id="mima" class="form-control" type="password" placeholder="请输入您的密码"/>
+		<br />
+		<button onfocus="zhuyemian()" id="haole"   class="btn btn-block btn-danger">我输好了</button>
+		<br />
+		<img width="300px" class="img-circle img-responsive center-block" src="02A8CADCDD2BC2CA92A3A9CA58BB4AE9.png" />
+	</div>
+	</body>
+</html>
