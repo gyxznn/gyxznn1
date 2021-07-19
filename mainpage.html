@@ -23,21 +23,20 @@
      //2.获取密码框输入
      var password0 = document.getElementById("mima").value;
      //3.检测账号密码是否为空且是否与设置相同
-     if(acconut != "20200507"||password0!= "jiuyuechuyi666")
+     /*if(acconut != "20200507"||password0!= "jiuyuechuyi666")
      {
      	for(var i=0;i < 100;i++)
      	{
      	alert("检测到非张同学的非法分子试图进入请立刻停止你的行为");
      	}
      	return;
-     }
+     }*/
      //3.若相同则可进入
-     else{
-     	window.location.href="xiangmuye.html";
+     if(acconut == "20200507"||password0 == "jiuyuechuyi666")
+     {
+     	　window.open('xiangmuye.html');
      }
-    }		
-    
-		
+		}
 	</script>
 	</head>
 	<body>
